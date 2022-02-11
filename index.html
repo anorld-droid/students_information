@@ -50,8 +50,8 @@
               <th scope="col">First Name</th>
               <th scope="col">Last Name</th>
               <th scope="col">Admission Number</th>
-              <th scope="col">status</th>
-              <th scope="col">completion</th>
+              <th scope="col">Email</th>
+              <th scope="col">Stage</th>
             </tr>
           </thead>
           <tbody id="table_body"></tbody>
@@ -66,17 +66,17 @@
     ></script>
   </body>
   <script>
-    window.onload = function () {
-      query = ' ';
-      var xhtml = new XMLHttpRequest();
-      xhtml.onreadystatechange = function () {
-        if (this.readyState == 4 && this.status == 200) {
-          document.getElementById('table_body').innerHTML = this.responseText;
-        }
-      };
-      xhtml.open('GET', 'dbOperation.php?query=' + query, true);
-      xhtml.send();
-    };
+    // window.onload = function () {
+    //   query = ' ';
+    //   var xhtml = new XMLHttpRequest();
+    //   xhtml.onreadystatechange = function () {
+    //     if (this.readyState == 4 && this.status == 200) {
+    //       document.getElementById('table_body').innerHTML = this.responseText;
+    //     }
+    //   };
+    //   xhtml.open('GET', 'operations.php?query=' + query, true);
+    //   xhtml.send();
+    // };
 
     function showSuggetions(query) {
       var inputField = document.getElementById('search').value;
@@ -91,7 +91,7 @@
             document.getElementById('table_body').innerHTML = this.responseText;
           }
         };
-        xhtml.open('GET', 'dbOperation.php?query=' + query, true);
+        xhtml.open('GET', 'operations.php?query=' + query, true);
         xhtml.send();
       }
     }
