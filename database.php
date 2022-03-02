@@ -1,5 +1,12 @@
 <?php
+/*members
+CCS/00082/019 -> VINCENT MUNENE MWENDA
+CCS/00008/019 -> PATRICE MULINDI
+CCS/00092/019 -> TITUS MURITHI
+CCS/00141/019 ->  DERROL EDWARD
+CCS/00037/019 -> FREDY M. ODHIAMBO
 
+*/
 function connect($server, $user, $password, $db_name)
 {
     $db = new mysqli(
